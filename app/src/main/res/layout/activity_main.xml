@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlt_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_top">
+
+        <ImageView
+            android:id="@+id/img_clean"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/txt_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/img_clean"
+            android:text="@string/txt_cleaner"
+            android:textColor="@color/txt_all" />
+
+        <ImageView
+            android:id="@+id/img_ram_usage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/img_clean"
+            android:layout_alignLeft="@id/img_clean"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:id="@+id/txt_percent"
+            android:layout_alignRight="@id/img_ram_usage"
+            android:layout_marginRight="50dp"
+            android:layout_centerVertical="true"
+            android:textSize="26sp"
+            android:text="@string/txt_percent"
+            android:textColor="@color/txt_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txt_ram_usage"
+            android:text="66"
+            android:textColor="@color/txt_all"
+            android:textSize="66sp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/txt_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/img_disk_usage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:id="@+id/txt_disk_usage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/percent"
+            android:textColor="@color/txt_all"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/txt_disk_usage"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:text="@string/txt_percent"
+            android:textColor="@color/txt_all" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlt_top"
+        android:background="@drawable/bg_recycler" />
+
+</RelativeLayout>
